@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Design</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+                 <link href="style/css/test.css" type="text/css" rel="stylesheet">
+        <link href="style/css/bootstrap.css" type="text/css" rel="stylesheet">
+        <link href="style/css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <link href="style/css/bs-edit.css" type="text/css" rel="stylesheet">
+
+        
+        <link href="https://fonts.googleapis.com/css?family=Bangers|Covered+By+Your+Grace|Handlee|Open+Sans|Pacifico|Patrick+Hand+SC|Permanent+Marker|Snippet" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Capriola|Carrois+Gothic+SC|Chelsea+Market|Jua|Luckiest+Guy|Mallanna|Maven+Pro|Patrick+Hand+SC|Poppins|Quicksand|Ubuntu+Condensed" rel="stylesheet">
+
+    </head>
+    
+    <body>
+   <div class="carousel">
+    <figure>
+    <div>dhaljfhaljfhl</div>
+    <div>dhaljfhaljfhl</div>
+    </figure>
+        <figure>
+    <div>dhaljfhaljfhl</div>
+    <div>dhaljfhaljfhl</div>
+    </figure>
+        <figure>
+    <div>dhaljfhaljfhl</div>
+    <div>dhaljfhaljfhl</div>
+    </figure>
+        <figure>
+    <div>dhaljfhaljfhl</div>
+    <div>dhaljfhaljfhl</div>
+    </figure>
+    <nav>
+        <button class="nav prev">Prev</button>
+        <button class="nav next">Next</button>
+    </nav>
+</div>
+    </body>
+    
+      <script
+           src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+      </script>
+
+    
+    <script>
+ 
+     var
+    carousel = document.querySelector('.carousel'),
+    figure = carousel.querySelector('figure'),
+    nav = carousel.querySelector('nav'),
+    numImages = figure.childElementCount,
+    theta =  2 * Math.PI / numImages,
+    currImage = 0
+;
+    
+nav.addEventListener('click', onClick, true);
+
+function onClick(e) {
+    e.stopPropagation();
+    
+    var t = e.target;
+    if (t.tagName.toUpperCase() != 'BUTTON')
+        return;
+    
+    if (t.classList.contains('next')) {
+        currImage++;
+    }
+    else {
+        currImage--;
+    }
+    
+    figure.style.transform = `rotateY(${currImage * -theta}rad)`;
+}
+    </script>
+    
+    
+    
+    
+    
+    
+</html>
